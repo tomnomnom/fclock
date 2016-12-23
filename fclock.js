@@ -12,8 +12,8 @@ function fclock(elem, conf){
     if (height < width) {
         radius = (height/2) - padding;
     }
-    var barThickness = radius * 0.2;
-    var barGap = radius * 0.07;
+    var barThickness = radius * 0.25;
+    var barGap = radius * 0.06;
 
     var secondsOuter = radius - barGap;
     var minutesOuter = secondsOuter - barThickness - barGap;
