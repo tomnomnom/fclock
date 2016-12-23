@@ -2,7 +2,7 @@ function fclock(elem, conf){
 
     // Config
     var padding  = conf.rimPadding || 5;
-    var bgColor  = conf.bgColor || 'rgb(32, 32, 32)';
+    var bgColor  = conf.bgColor || 'rgb(40, 40, 40)';
     var barColor = conf.barColor || '#ecf0f1';
 
     // Derived values
