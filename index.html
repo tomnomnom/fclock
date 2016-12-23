@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>fclock</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      body {
+        background-color: #323232;
+      }
+      section {
+        text-align: center;
+      }
+      canvas {
+        padding: 1em;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="main">
+      <canvas id="demo" width="500" height="500" data-val="0">No canvas</canvas>
+    </section>
+
+    <script src="fclock.js"></script>
+    <script>
+      window.onload = function(){
+        var demo = document.getElementById('demo');
+        fclock(demo, {
+        });
+
+      };
+    </script>
+    
+  </body>
+</html>
