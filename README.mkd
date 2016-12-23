@@ -1,3 +1,5 @@
 # fclock
 
 Toy clock thing built on HTML Canvas
+
+Demo here: https://tomnomnom.github.io/fclock/
