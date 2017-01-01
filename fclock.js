@@ -31,20 +31,23 @@ function fclock(elem, conf){
     // Main draw loop
     var draw = function(){
 
+        // Using floats to make for smoother movement
         var date = new Date();
-        var hours = date.getHours();
+        var millis  = date.getMilliseconds();
+        var seconds = date.getSeconds() + millis/1000;
+        var minutes = date.getMinutes() + seconds/60;
+        var hours   = date.getHours()   + minutes/60;
+
+        // 12 hour clock, not 24
         if (hours > 12) {
             hours -= 12;
         }
-        var minutes = date.getMinutes();
-        var seconds = date.getSeconds();
-        var millis = date.getMilliseconds();
 
+        // Draw
         drawBg(c);
-        // Using floats to make for smoother movement
-        drawSeconds(c, seconds + (millis/1000));
-        drawMinutes(c, minutes + (seconds/60));
-        drawHours(c, hours + (minutes/60));
+        drawSeconds(c, seconds);
+        drawMinutes(c, minutes);
+        drawHours(c, hours);
 
         // Next frame
         requestAnimationFrame(draw);
